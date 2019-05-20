@@ -7,53 +7,69 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="317dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="94dp"
-        android:layout_marginRight="94dp"
-        android:text="I am thinking of Number 1 and 20"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_margin="5dp"
-        android:textSize="15sp"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="97dp"
+        android:layout_marginLeft="97dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginRight="101dp"
+        android:text="Number Shapes"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="25dp" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/intro"
+        android:layout_width="391dp"
         android:layout_height="wrap_content"
-        android:text="Can You Guess?"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="647dp" />
+        android:layout_above="@+id/UsersNumber"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="54dp"
+        android:text="Enter the number below to findout it is a TriangularNumber SquareNumber Or both"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="64dp" />
 
     <EditText
-        android:id="@+id/guessEdttxt"
+        android:id="@+id/UsersNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="597dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_above="@+id/btn"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="97dp"
         android:inputType="number"
-        android:layout_marginBottom="577dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintTop_toBottomOf="@+id/intro"
+        app:layout_constraintVertical_bias="0.583"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp" />
 
     <Button
         android:id="@+id/btn"
-        android:layout_width="133dp"
-        android:layout_height="55dp"
-        android:onClick="guess"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginEnd="163dp"
         android:layout_marginRight="163dp"
-        android:layout_marginBottom="494dp"
-        android:text="Guess" />
-
+        android:layout_marginBottom="270dp"
+        android:onClick="testNumber"
+        android:text="Test Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="InvalidId,MissingConstraints,OnClick"
+        tools:layout_editor_absoluteY="361dp" />
 </RelativeLayout>
